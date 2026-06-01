@@ -7,7 +7,7 @@ import { useReveal } from '../hooks/useReveal';
 
 const heroSlides = [
   {
-    img: 'https://images.unsplash.com/photo-1541643600914-78b084683702?w=1920&h=1080&fit=crop&q=85',
+    img: 'https://images.unsplash.com/photo-1615412704911-55d589229864?w=1920&h=1080&fit=crop&q=85',
     tag: 'Colección Oriental',
     title: 'El arte del perfume oriental',
     sub: 'Oud, sándalo y especias raras, compuestos para quienes entienden el lujo sin esfuerzo.',
@@ -192,36 +192,12 @@ export default function Landing({ onCartOpen }) {
             </div>
             <div className="flex flex-col gap-3 sm:gap-4 pt-8 sm:pt-10">
               <div className="rounded-2xl overflow-hidden img-zoom flex-1">
-                <img src="https://images.unsplash.com/photo-1590156206657-aec7c7d7d9fa?w=400&h=400&fit=crop&q=85" alt="" className="w-full h-full object-cover" style={{ aspectRatio:'1' }} />
+                <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=400&h=400&fit=crop&q=85" alt="" className="w-full h-full object-cover" style={{ aspectRatio:'1' }} />
               </div>
               <div className="rounded-2xl overflow-hidden img-zoom flex-1">
                 <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=400&fit=crop&q=85" alt="" className="w-full h-full object-cover" style={{ aspectRatio:'1' }} />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PROMO BANNER ── */}
-      <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-10 py-10 sm:py-16">
-        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-[#1A1714] px-6 sm:px-10 py-12 sm:py-16 md:py-20 reveal-scale">
-          <img src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=1200&h=600&fit=crop&q=80" alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
-          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full opacity-10" style={{ background: 'radial-gradient(circle, #D4AF7A, transparent)' }} />
-          <div className="relative z-10 text-center max-w-xl mx-auto">
-            <span className="inline-block text-[10px] tracking-[0.5em] text-[#D4AF7A] uppercase font-medium mb-4 px-4 py-1.5 rounded-full border border-[#D4AF7A]/30">
-              Oferta exclusiva
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
-              20% en tu primera compra
-            </h2>
-            <p className="text-white/55 text-sm sm:text-base mb-3">Usa el código al finalizar tu pedido</p>
-            <div className="inline-block bg-white/10 border border-white/20 rounded-xl px-5 sm:px-6 py-2 sm:py-2.5 mb-7 sm:mb-8">
-              <span className="shimmer-gold text-lg sm:text-xl font-bold tracking-[0.3em]">BIENVENIDO</span>
-            </div>
-            <br />
-            <Link to="/catalogo" className="inline-flex items-center gap-2 gold-gradient text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity btn-press shadow-xl">
-              Aprovechar oferta <ArrowRight size={15} />
-            </Link>
           </div>
         </div>
       </section>
@@ -234,8 +210,8 @@ export default function Landing({ onCartOpen }) {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {[
-            { name: 'Oriental',  img: 'https://images.unsplash.com/photo-1541643600914-78b084683702?w=600&h=700&fit=crop&q=80', count: '4 fragancias' },
-            { name: 'Floral',    img: 'https://images.unsplash.com/photo-1590156206657-aec7c7d7d9fa?w=600&h=700&fit=crop&q=80', count: '2 fragancias' },
+            { name: 'Oriental',  img: 'https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=600&h=700&fit=crop&q=80', count: '4 fragancias' },
+            { name: 'Floral',    img: 'https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&h=700&fit=crop&q=80', count: '2 fragancias' },
             { name: 'Amaderado', img: 'https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&h=700&fit=crop&q=80', count: '1 fragancia' },
             { name: 'Chypre',    img: 'https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&h=700&fit=crop&q=80', count: '1 fragancia' },
           ].map((cat, i) => (
