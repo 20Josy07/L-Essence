@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { AdminProvider, useAdmin } from './context/AdminContext';
@@ -20,8 +20,16 @@ import Orders from './pages/admin/Orders';
 
 function AdminGate() {
   const { isAdmin, authLoading } = useAdmin();
+  const [timedOut, setTimedOut] = useState(false);
 
-  if (authLoading) {
+  // Si Firebase no responde en 5s (Auth no habilitado, sin red, etc.)
+  // mostramos el login en vez de quedarnos en el spinner para siempre.
+  useEffect(() => {
+    const t = setTimeout(() => setTimedOut(true), 5000);
+    return () => clearTimeout(t);
+  }, []);
+
+  if (authLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-[#FAF8F5] flex items-center justify-center">
         <div className="w-6 h-6 rounded-full border-2 border-[#1A1714]/10 border-t-[#B8955A] animate-spin" />
